@@ -2063,7 +2063,7 @@ void handle_setup_mode(void)
         case 0: paddle_swap         = !paddle_swap;                              break;
         case 1: sidetone_enabled    = !sidetone_enabled;                         break;
         case 2:
-            tone_freq_idx = (tone_freq_idx + 1) % 3;
+            tone_freq_idx = (tone_freq_idx + 2) % 3;
             tone_div_val  = (uint8_t)(tone_freq_idx + 2);
             break;
         case 3: repeat_interval_idx = (repeat_interval_idx + 1) % 6;            break;
@@ -2098,7 +2098,7 @@ void draw_startup_screen(void)
     drawstr_6px(0, 30, "Powered by", 1);
     drawstr_6px(40, 40, "UIAPduino", 1);
     ssd1306_drawFastHLine(0, 50, 128, 1);
-    drawstr_6px(0, 52, "Version 0.2", 1);
+    drawstr_6px(0, 52, "Version 0.3", 1);
     ssd1306_refresh();
 }
 
