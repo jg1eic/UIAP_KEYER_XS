@@ -2098,7 +2098,7 @@ void draw_startup_screen(void)
     drawstr_6px(0, 30, "Powered by", 1);
     drawstr_6px(40, 40, "UIAPduino", 1);
     ssd1306_drawFastHLine(0, 50, 128, 1);
-    drawstr_6px(0, 52, "Version 0.3", 1);
+    drawstr_6px(0, 52, "Version 0.4", 1);
     ssd1306_refresh();
 }
 
@@ -2534,8 +2534,8 @@ int main()
         dit_est = (1200UL * 1000) / (wpm * 256);
         key_spd = dit_est;
     }
-    tim1_int_init(); //
     init_flash_messages();
+    tim1_int_init(); //
     // tim2_pwm_init();             // TIM2 PWM Setup
 
     if (!resumed_from_standby) {
